@@ -10,7 +10,7 @@ Each project card shows:
 - **Running**, **Partly running** or **Stopped**.
 - Each part (web, API, watcher), whether it's up, and the port it actually listens on. Vite moves to the next free port when its usual one is taken, and the Open link follows it.
 - Warnings:
-  - when another project holds a port this one needs, such as Tedmarks and hrCollector both wanting `:5173`;
+  - when another project or program holds a port this one needs;
   - when a process was started by a Claude Code session rather than by you;
   - when stopping backerUpper would interrupt a backup.
 - A **Processes** list with each process ID, command, ports, and terminal.
@@ -27,7 +27,7 @@ Projects are listed in [config/projects.json](config/projects.json).
 
 ## Launcher apps
 
-`scripts/install-launchers.sh` builds an app in `/Applications` from each file in [launchers/](launchers/): **Tedmarks**, **hrCollector** and **Chatworthy**. It also installs `~/.local/bin/dev-app-port`, which the launchers use to find the port Vite started on. Rerun the script after editing a launcher. It never overwrites an app it didn't make.
+`scripts/install-launchers.sh` builds an app in `/Applications` from each file in [launchers/](launchers/): **Tedmarks**, **hrCollector** and **Chatworthy**. It also installs `~/.local/bin/dev-app-port`, which the Tedmarks launcher uses to find the port Vite started on. Rerun the script after editing a launcher. It never overwrites an app it didn't make.
 
 The first time each new launcher runs, macOS asks whether it may control iTerm. Click Allow.
 

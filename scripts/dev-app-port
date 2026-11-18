@@ -3,8 +3,8 @@
 #
 #   dev-app-port <folder>
 #
-# Launchers use it to find where Vite really started, since Vite moves to the next free
-# port when its usual one is taken. Prints nothing and exits 1 when nothing listens yet.
+# The Tedmarks launcher uses it to find where Vite really started, since Vite moves to the
+# next free port when its usual one is taken. Prints nothing and exits 1 when nothing listens yet.
 PATH=/usr/bin:/bin:/usr/sbin:/sbin
 dir=$(cd "${1:?usage: dev-app-port <folder>}" 2>/dev/null && pwd -P) || exit 2
 

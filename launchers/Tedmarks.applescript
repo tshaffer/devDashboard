@@ -21,7 +21,7 @@ tell application "iTerm"
 	end tell
 end tell
 
--- Vite moves to the next free port when its usual one is taken, so ask where it started (max ~2 min)
+-- Tedmarks wants 5173, but Vite moves to the next free port if something else has it, so ask where it started (max ~2 min)
 set webPort to ""
 repeat 60 times
 	try

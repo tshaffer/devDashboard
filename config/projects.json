@@ -76,9 +76,9 @@
       "name": "hrCollector",
       "folder": "/Users/tedshaffer/src/hrCollector",
       "launcher": "/Applications/hrCollector.app",
-      "url": "http://localhost:5173",
+      "url": "http://localhost:5100",
       "parts": [
-        { "id": "web", "label": "Web (Vite)", "folder": "web", "port": 5173 },
+        { "id": "web", "label": "Web (Vite)", "folder": "web", "port": 5100 },
         { "id": "server", "label": "Server", "folder": "server", "port": 4100 }
       ]
     },

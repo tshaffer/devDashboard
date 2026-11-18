@@ -21,17 +21,14 @@ tell application "iTerm"
 	end tell
 end tell
 
--- Vite moves to the next free port when its usual one is taken, so ask where it started (max ~2 min)
-set webPort to ""
+-- Poll until the web app is up on port 5100 (max ~2 min). Its Vite config uses strictPort, so it never moves.
 repeat 60 times
 	try
-		set webPort to do shell script "$HOME/.local/bin/dev-app-port '/Users/tedshaffer/src/hrCollector/web'"
-		do shell script "curl -s --max-time 1 http://localhost:" & webPort & " > /dev/null"
+		do shell script "curl -s --max-time 1 http://localhost:5100 > /dev/null"
 		exit repeat
 	on error
-		set webPort to ""
 		delay 2
 	end try
 end repeat
 
-if webPort is not "" then do shell script "open -a 'Google Chrome' http://localhost:" & webPort
+do shell script "open -a 'Google Chrome' http://localhost:5100"
