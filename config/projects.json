@@ -12,28 +12,6 @@
       ]
     },
     {
-      "id": "stravatronics",
-      "name": "Stravatronics",
-      "folder": "/Users/tedshaffer/src/stravatronics",
-      "launcher": "/Applications/Stravatronics.app",
-      "url": "http://localhost:3010",
-      "parts": [
-        { "id": "web", "label": "Web", "folder": "apps/web", "port": 3010 },
-        { "id": "api", "label": "API", "folder": "apps/api", "port": 4010 }
-      ]
-    },
-    {
-      "id": "claudefood",
-      "name": "Claude Food",
-      "folder": "/Users/tedshaffer/Documents/Projects/claudeFood",
-      "launcher": "/Applications/Food.app",
-      "url": "http://localhost:3020",
-      "parts": [
-        { "id": "web", "label": "Web", "folder": "apps/web", "port": 3020 },
-        { "id": "api", "label": "API", "folder": "apps/api", "port": 3021 }
-      ]
-    },
-    {
       "id": "chatalog",
       "name": "Chatalog",
       "folder": "/Users/tedshaffer/Documents/Projects/chatorama/packages/chatalog",
@@ -42,33 +20,6 @@
       "parts": [
         { "id": "backend", "label": "Backend", "folder": "backend", "port": 8008 },
         { "id": "frontend", "label": "Frontend watcher (webpack)", "folder": "frontend" }
-      ]
-    },
-    {
-      "id": "chatworthy",
-      "name": "Chatworthy",
-      "folder": "/Users/tedshaffer/Documents/Projects/chatorama/packages/chatworthy",
-      "launcher": "/Applications/Chatworthy.app",
-      "note": "Chrome extension. Reload it in chrome://extensions after each build.",
-      "parts": [{ "id": "watch", "label": "esbuild watcher", "folder": "." }]
-    },
-    {
-      "id": "claude-code-exporter",
-      "name": "Claude Code Exporter",
-      "folder": "/Users/tedshaffer/Documents/Projects/chatorama/packages/claude-code-exporter",
-      "launcher": "/Applications/ClaudeCodeExporter.app",
-      "url": "http://localhost:9090",
-      "parts": [{ "id": "server", "label": "Server", "folder": ".", "port": 9090 }]
-    },
-    {
-      "id": "tedmarks",
-      "name": "Tedmarks",
-      "folder": "/Users/tedshaffer/src/tedmarks",
-      "launcher": "/Applications/Tedmarks.app",
-      "url": "http://localhost:5173",
-      "parts": [
-        { "id": "web", "label": "Web (Vite)", "folder": "web", "port": 5173 },
-        { "id": "api", "label": "API", "folder": "api", "port": 4200 }
       ]
     },
     {
@@ -83,13 +34,68 @@
       ]
     },
     {
+      "id": "claude-code-exporter",
+      "name": "Claude Code Exporter",
+      "folder": "/Users/tedshaffer/Documents/Projects/chatorama/packages/claude-code-exporter",
+      "launcher": "/Applications/ClaudeCodeExporter.app",
+      "url": "http://localhost:9090",
+      "parts": [
+        { "id": "server", "label": "Server", "folder": ".", "port": 9090 }
+      ]
+    },
+    {
+      "id": "tedmarks",
+      "name": "Tedmarks",
+      "folder": "/Users/tedshaffer/src/tedmarks",
+      "launcher": "/Applications/Tedmarks.app",
+      "url": "http://localhost:5173",
+      "parts": [
+        { "id": "web", "label": "Web (Vite)", "folder": "web", "port": 5173 },
+        { "id": "api", "label": "API", "folder": "api", "port": 4200 }
+      ]
+    },
+    {
       "id": "backerupper",
       "name": "backerUpper",
       "folder": "/Users/tedshaffer/src/backerUpper",
       "launcher": "/Applications/backerUpper.app",
       "url": "http://127.0.0.1:4199",
       "guard": "backerUpperJob",
-      "parts": [{ "id": "server", "label": "Server", "folder": ".", "port": 4199 }]
+      "parts": [
+        { "id": "server", "label": "Server", "folder": ".", "port": 4199 }
+      ]
+    },
+    {
+      "id": "chatworthy",
+      "name": "Chatworthy",
+      "folder": "/Users/tedshaffer/Documents/Projects/chatorama/packages/chatworthy",
+      "launcher": "/Applications/Chatworthy.app",
+      "note": "Chrome extension. Reload it in chrome://extensions after each build.",
+      "parts": [
+        { "id": "watch", "label": "esbuild watcher", "folder": "." }
+      ]
+    },
+    {
+      "id": "claudefood",
+      "name": "Claude Food",
+      "folder": "/Users/tedshaffer/Documents/Projects/claudeFood",
+      "launcher": "/Applications/Food.app",
+      "url": "http://localhost:3020",
+      "parts": [
+        { "id": "web", "label": "Web", "folder": "apps/web", "port": 3020 },
+        { "id": "api", "label": "API", "folder": "apps/api", "port": 3021 }
+      ]
+    },
+    {
+      "id": "stravatronics",
+      "name": "Stravatronics",
+      "folder": "/Users/tedshaffer/src/stravatronics",
+      "launcher": "/Applications/Stravatronics.app",
+      "url": "http://localhost:3010",
+      "parts": [
+        { "id": "web", "label": "Web", "folder": "apps/web", "port": 3010 },
+        { "id": "api", "label": "API", "folder": "apps/api", "port": 4010 }
+      ]
     }
   ]
 }
