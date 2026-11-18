@@ -1,0 +1,17 @@
+#!/bin/bash
+# Prints the first TCP port that a process running from inside <folder> listens on.
+#
+#   dev-app-port <folder>
+#
+# Launchers use it to find where Vite really started, since Vite moves to the next free
+# port when its usual one is taken. Prints nothing and exits 1 when nothing listens yet.
+PATH=/usr/bin:/bin:/usr/sbin:/sbin
+dir=$(cd "${1:?usage: dev-app-port <folder>}" 2>/dev/null && pwd -P) || exit 2
+
+lsof -w -nP -iTCP -sTCP:LISTEN -F pn 2>/dev/null | awk '
+  /^p/ { pid = substr($0, 2) }
+  /^n/ { n = $0; sub(/.*:/, "", n); print pid, n }' |
+while read -r pid port; do
+  cwd=$(lsof -w -a -p "$pid" -d cwd -Fn 2>/dev/null | sed -n 's/^n//p')
+  case "$cwd" in "$dir"|"$dir"/*) echo "$port"; exit 0 ;; esac
+done | head -1 | grep . || exit 1
